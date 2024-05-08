@@ -2,10 +2,9 @@ package com.example.freeshopproject.ui.product
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.result.contract.ActivityResultContracts
-import com.example.freeshopproject.R
+import com.example.freeshopproject.data.Product
+import com.example.freeshopproject.data.Store
 import com.example.freeshopproject.databinding.ActivityAddProductBinding
-import com.example.freeshopproject.ui.MainActivityMenu
 
 class MainActivityAdd : AppCompatActivity() {
     private lateinit var binding: ActivityAddProductBinding
@@ -13,10 +12,34 @@ class MainActivityAdd : AppCompatActivity() {
         binding = ActivityAddProductBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
         navigation()
+
+        val store = Store()
+
+        binding.btnAdd.setOnClickListener {
+            val name = binding.etName.text.toString().trim()
+            val code = binding.etCode.text.toString().trim()
+            val price = binding.etPrice.text.toString().trim()
+            val quantity = binding.etQuantity.text.toString().trim()
+
+            if (code.isNotEmpty() && quantity.isNotEmpty() && name.isNotEmpty() && price.isNotEmpty()) {
+                val codeInt = code.toInt()
+                val quantityInt = quantity.toInt()
+                val nameString = name
+                val priceDouble = price.toDouble()
+                val product = Product(
+                    nameString, codeInt, priceDouble, quantityInt
+                )
+                store.added(product)
+            } else {
+                println("Error: Algunos campos están vacíos")
+            }
+        }
     }
-    private fun navigation(){
-        binding.btnBack.setOnClickListener{
+
+    private fun navigation() {
+        binding.btnBack.setOnClickListener {
             finish()
         }
     }
