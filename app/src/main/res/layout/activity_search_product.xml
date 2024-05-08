@@ -15,24 +15,28 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
     <ImageView
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:src="@drawable/background_search"
         app:layout_constraintStart_toStartOf="@id/line1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="ContentDescription" />
+
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="49dp"
+        android:layout_marginTop="65dp"
         android:text="@string/title_search"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="35sp"
-        android:layout_marginTop="65dp"
-        app:layout_constraintTop_toTopOf="@id/btn_back"/>
+        app:layout_constraintTop_toTopOf="@id/btn_back"
+        tools:ignore="TextSizeCheck" />
 
     <View
         android:id="@+id/view_line"
@@ -98,7 +102,7 @@
         android:layout_height="wrap_content"
         android:text="@string/name"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
@@ -110,55 +114,61 @@
         android:layout_height="wrap_content"
         android:text="@string/code"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@id/tv_name"
         app:layout_constraintStart_toStartOf="@id/content_info"/>
+
     <TextView
         android:id="@+id/tv_quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/quantity"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:text="@string/quantity"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/content_info"
         app:layout_constraintTop_toTopOf="@id/tv_code"
-        app:layout_constraintStart_toStartOf="@id/content_info"/>
+        tools:ignore="TextSizeCheck" />
+
     <TextView
         android:id="@+id/tv_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/price"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:text="@string/price"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/content_info"
         app:layout_constraintTop_toTopOf="@id/tv_quantity"
-        app:layout_constraintStart_toStartOf="@id/content_info"/>
+        tools:ignore="TextSizeCheck" />
+
     <TextView
         android:id="@+id/tv_value_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/empty"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:text="@string/empty"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
         app:layout_constraintTop_toTopOf="@id/content_info"
-        app:layout_constraintStart_toEndOf="@id/tv_name"/>
+        tools:ignore="TextSizeCheck" />
     <TextView
         android:id="@+id/tv_value_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/empty"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
@@ -170,23 +180,25 @@
         android:layout_height="wrap_content"
         android:text="@string/empty"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="@id/tv_value_code"
         app:layout_constraintStart_toEndOf="@id/tv_quantity"/>
+
     <TextView
         android:id="@+id/tv_value_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/empty"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:text="@string/empty"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_price"
         app:layout_constraintTop_toTopOf="@id/tv_value_quantity"
-        app:layout_constraintStart_toEndOf="@id/tv_price"/>
+        tools:ignore="TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
