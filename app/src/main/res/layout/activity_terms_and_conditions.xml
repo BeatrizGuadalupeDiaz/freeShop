@@ -1,19 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".ui.MainActivityTermsAndConditions">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/icon_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
         <TextView
-            android:id="@+id/tv_descrptionTerms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="terminos "
-            />
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="65dp"
+            android:text="@string/terms_conditions"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            app:layout_constraintTop_toTopOf="@id/btn_back" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="350dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="20dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/termsAndConditions_welcome"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/view_line" />
+
+        <TextView
+            android:id="@+id/tv_accept"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="20dp"
+            android:paddingHorizontal="70dp"
+            android:text="@string/termsAndConditions_accept"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+
+        <TextView
+            android:id="@+id/tv_title_description1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/termsAndConditions_title_description1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_accept" />
+
+        <TextView
+            android:id="@+id/tv_description1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/termsAndConditions_description1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_description1"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_title_description2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/termsAndConditions_title_description2"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_description1" />
+
+        <TextView
+            android:id="@+id/tv_description2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/termsAndConditions_description2"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_description2"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_title_description3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/termsAndConditions_title_description3"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_description2" />
+
+        <TextView
+            android:id="@+id/tv_description3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/termsAndConditions_description3"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_description3"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_title_description4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/termsAndConditions_title_description4"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_description3" />
+
+        <TextView
+            android:id="@+id/tv_description4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/termsAndConditions_description4"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_description4"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_title_description5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/termsAndConditions_title_description5"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_description4" />
+
+        <TextView
+            android:id="@+id/tv_description5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/termsAndConditions_description5"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_description5"
+            tools:ignore="VisualLintLongText" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

@@ -16,16 +16,18 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/background_menu"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/view_line2"
             app:layout_constraintEnd_toStartOf="@id/line1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Free Shop"
+            android:text="@string/free_shop"
+            android:layout_marginTop="15dp"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="50sp"
@@ -35,11 +37,11 @@
             android:id="@+id/view_line"
             android:layout_width="350dp"
             android:layout_height="2dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="10dp"
             android:background="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_Add"
@@ -47,14 +49,15 @@
             android:layout_height="100dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/grey"
-            android:drawableStart="@drawable/icon_star"
+            android:drawableStart="@drawable/icon_add"
             android:paddingHorizontal="40dp"
-            android:text="Agregar"
+            android:text="@string/add"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/line1"
-            app:layout_constraintTop_toBottomOf="@id/view_line" />
+            app:layout_constraintTop_toBottomOf="@id/view_line"
+            tools:ignore="VisualLintButtonSize" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_Delete"
@@ -62,14 +65,15 @@
             android:layout_height="100dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/grey"
-            android:drawableStart="@drawable/icon_search"
+            android:drawableStart="@drawable/icon_delete"
             android:paddingHorizontal="40dp"
-            android:text="Borrar"
+            android:text="@string/delete"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/line1"
-            app:layout_constraintTop_toBottomOf="@id/btn_Add" />
+            app:layout_constraintTop_toBottomOf="@id/btn_Add"
+            tools:ignore="VisualLintButtonSize" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_Search"
@@ -79,12 +83,13 @@
             android:backgroundTint="@color/grey"
             android:drawableStart="@drawable/icon_search"
             android:paddingHorizontal="40dp"
-            android:text="Buscar"
+            android:text="@string/search"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/line1"
-            app:layout_constraintTop_toBottomOf="@id/btn_Delete" />
+            app:layout_constraintTop_toBottomOf="@id/btn_Delete"
+            tools:ignore="VisualLintButtonSize" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_Sell"
@@ -94,12 +99,13 @@
             android:backgroundTint="@color/grey"
             android:drawableStart="@drawable/icon_sell"
             android:paddingHorizontal="40dp"
-            android:text="Vender"
+            android:text="@string/sell"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/line1"
-            app:layout_constraintTop_toBottomOf="@id/btn_Search" />
+            app:layout_constraintTop_toBottomOf="@id/btn_Search"
+            tools:ignore="VisualLintButtonSize" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_favorites"
@@ -109,12 +115,14 @@
             android:backgroundTint="@color/grey"
             android:drawableStart="@drawable/icon_star"
             android:paddingHorizontal="40dp"
-            android:text="Favoritos"
+            android:text="@string/favorites"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/line1"
-            app:layout_constraintTop_toBottomOf="@id/btn_Sell"/>
+            app:layout_constraintTop_toBottomOf="@id/btn_Sell"
+            tools:ignore="VisualLintButtonSize" />
+
         <View
             android:id="@+id/view_line2"
             android:layout_width="350dp"
@@ -129,11 +137,12 @@
             android:id="@+id/btn_tv_termsAndCondition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Terminos y Condiciones"
-            android:textSize="20sp"
-            android:textColor="@color/white"
+            android:text="@string/terms_conditions"
             android:textAlignment="center"
-            app:layout_constraintTop_toBottomOf="@id/view_line2"/>
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/view_line2" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/line1"
