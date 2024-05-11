@@ -35,9 +35,9 @@
 
         <View
             android:id="@+id/view_line"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
             android:background="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -140,8 +140,8 @@
             android:text="@string/terms_conditions"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:layout_marginTop="15dp"
-            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@id/view_line2" />
 
         <androidx.constraintlayout.widget.Guideline

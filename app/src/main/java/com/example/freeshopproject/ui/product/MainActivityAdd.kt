@@ -15,8 +15,6 @@ class MainActivityAdd : AppCompatActivity() {
 
         navigation()
 
-        val store = Store()
-
         binding.btnAdd.setOnClickListener {
             val name = binding.etName.text.toString().trim()
             val code = binding.etCode.text.toString().trim()
@@ -31,7 +29,7 @@ class MainActivityAdd : AppCompatActivity() {
                 val product = Product(
                     nameString, codeInt, priceDouble, quantityInt
                 )
-                store.added(product)
+                Store.added(product)
             } else {
                 println("Error: Algunos campos están vacíos")
             }

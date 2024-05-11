@@ -1,6 +1,6 @@
 package com.example.freeshopproject.data
 
-class Store() {
+object Store {
     val list: MutableList<Product> = mutableListOf()
 
     fun added(product: Product) {
@@ -15,26 +15,42 @@ class Store() {
     }
 
     fun delete(product: Product) {
-        if (!list.contains(product)) {
-            println("Error, no existe")
-            return
+        val existingProduct = list.find { it.code === product.code }
+        if (existingProduct != null) {
+            list.remove(product)
+            println("Producto: ${product.name}, ${product.code}, ${product.quantity} elimnado ")
+        } else {
+            println("El producto no existe")
         }
-        list.remove(product)
     }
 
-    fun search(product: Product): Product {
-        if (!list.contains(product)) {
-            println("Error, no existe")
+    fun search(product: String): Product {
+        val existingProduct = list.find {
+            try {
+                it.code == product.toInt()
+            } catch (e: NumberFormatException) {
+                false
+            } || it.name == product
         }
-        return product
+        var productFind: Product = Product("", 0, 0.0, 0)
+        if (existingProduct != null) {
+            productFind = existingProduct
+            println("producto si existe")
+        } else {
+            println("El producto no existe")
+        }
+        return productFind
     }
 
     fun sell(product: Product) {
-        if (!list.contains(product)) {
-            println("Error, no existe")
-            return
+        val existingProduct = list.find { it.code == product.code }
+        if (existingProduct != null) {
+            if (existingProduct.quantity < product.quantity) {
+                println("cantidad insuficiente para ser vendida")
+                return
+            }
+            existingProduct.quantity -= product.quantity
+            println("El producto ${existingProduct.name} ha sido actualizado, cantidad: ${existingProduct.quantity}")
         }
-        val index = list.indexOf(product)
-        //list[index].quantity = list[index].quantity - product.quantity
     }
 }
